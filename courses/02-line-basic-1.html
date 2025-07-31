@@ -10,7 +10,7 @@
     .slide h1, .slide h2 { font-size: 3em; }
     .slide p { font-size: 1.8em; }
     .slide ul { list-style-position: inside; padding-left: 0; margin-top: 20px; }
-    .slide li { font-size: 1.8em; margin: 10px 0; }
+    .slide li { font-size: 1.8em; margin: 8px 0; }
     .slide.active { display: block; }
     .nav-buttons { position: fixed; bottom: 20px; width: 100%; text-align: center; }
     button { background-color: #06c755; color: white; border: none; padding: 15px 30px; margin: 5px; font-size: 20px; cursor: pointer; border-radius: 6px; }
@@ -29,26 +29,105 @@
 
   <div class="slide">
     <h2>課程目標</h2>
-    <p>讓您能夠熟練使用LINE，與親友輕鬆聯繫</p>
+    <p>學會LINE的核心功能與實用技巧</p>
     <ul>
-      <li>傳送文字、貼圖、照片、影片、語音、視訊</li>
-      <li>新增好友並管理好友</li>
-      <li>使用記事本、相簿、群組公告</li>
-      <li>學會封鎖帳號、查證訊息真偽</li>
+      <li>設定個人檔案</li>
+      <li>新增好友各種方式</li>
+      <li>聊天功能與進階技巧</li>
+      <li>群組、記事本與謠言查證</li>
     </ul>
     <div class="page-number">2</div>
   </div>
 
+  <!-- 第一批：個人檔案設定 10頁 -->
   <div class="slide">
-    <h2>Q & A 時間</h2>
-    <p>常見問題：</p>
-    <ul>
-      <li>如何知道對方已讀？</li>
-      <li>為什麼無法傳送訊息？</li>
-      <li>如何恢復刪掉的聊天紀錄？</li>
-      <li>如何封鎖或解除封鎖好友？</li>
-    </ul>
-    <div class="page-number">55</div>
+    <h2>進入設定</h2>
+    <p>先學會打開設定頁面 📱</p>
+    <ol>
+      <li>打開LINE應用程式</li>
+      <li>點擊右上角齒輪⚙️圖示</li>
+    </ol>
+    <img src="https://i.imgur.com/Y8gDP8b.png" alt="設定畫面">
+    <div class="page-number">3</div>
+  </div>
+
+  <div class="slide">
+    <h2>開啟個人檔案頁面</h2>
+    <p>個人檔案是修改名字和頭像的地方</p>
+    <ol>
+      <li>進入設定後，找到「個人檔案」</li>
+      <li>點擊進入</li>
+    </ol>
+    <div class="page-number">4</div>
+  </div>
+
+  <div class="slide">
+    <h2>修改名稱</h2>
+    <p>名字清楚，朋友才容易辨識</p>
+    <ol>
+      <li>在「名稱」欄位輸入想顯示的名字</li>
+      <li>可加入暱稱讓親友更容易認出</li>
+      <li>按下儲存完成修改</li>
+    </ol>
+    <div class="page-number">5</div>
+  </div>
+
+  <div class="slide">
+    <h2>更換頭像</h2>
+    <p>一張清楚的大頭照，讓朋友快速辨識您</p>
+    <ol>
+      <li>點擊頭像位置</li>
+      <li>選擇拍照或從相簿挑選</li>
+      <li>按下儲存</li>
+    </ol>
+    <div class="page-number">6</div>
+  </div>
+
+  <div class="slide">
+    <h2>修改狀態訊息</h2>
+    <p>分享心情或提醒朋友目前狀態</p>
+    <ol>
+      <li>在個人檔案頁面點「狀態訊息」</li>
+      <li>輸入想顯示的訊息，如「旅遊中✈️」</li>
+    </ol>
+    <div class="page-number">7</div>
+  </div>
+
+  <div class="slide">
+    <h2>個人資料安全</h2>
+    <p>保護隱私，避免陌生人找到您</p>
+    <ol>
+      <li>回到設定主頁</li>
+      <li>找到「隱私設定」</li>
+      <li>關閉「自動加好友」</li>
+    </ol>
+    <div class="page-number">8</div>
+  </div>
+
+  <div class="slide">
+    <h2>設定生日與性別（可選）</h2>
+    <p>讓親友更容易記得祝賀您生日 🎂</p>
+    <ol>
+      <li>在個人檔案頁面找到生日欄位</li>
+      <li>輸入生日並儲存</li>
+    </ol>
+    <div class="page-number">9</div>
+  </div>
+
+  <div class="slide">
+    <h2>檢查大頭貼顯示</h2>
+    <p>確認朋友看到的是最新的照片</p>
+    <ol>
+      <li>回到好友列表</li>
+      <li>查看自己的頭像是否已更新</li>
+    </ol>
+    <div class="page-number">10</div>
+  </div>
+
+  <div class="slide">
+    <h2>完成個人檔案設定！</h2>
+    <p>恭喜！您已經學會設定名稱、頭像與狀態訊息 🎉</p>
+    <div class="page-number">11</div>
   </div>
 
   <div class="nav-buttons">
@@ -61,29 +140,458 @@
     const slides = document.querySelectorAll('.slide');
 
     function showSlide(index) {
-      slides.forEach((s,i)=>{
-        s.classList.toggle('active', i===index);
-      });
+      slides.forEach((s,i)=> s.classList.toggle('active', i===index));
     }
 
     function nextSlide() {
-      if(currentSlide<slides.length-1){
+      if(currentSlide < slides.length-1){
         currentSlide++;
         showSlide(currentSlide);
       }
     }
 
     function prevSlide() {
-      if(currentSlide>0){
+      if(currentSlide > 0){
         currentSlide--;
         showSlide(currentSlide);
       }
     }
 
-    document.addEventListener('keydown', e=>{
+    document.addEventListener('keydown', e => {
       if(e.key==='ArrowRight') nextSlide();
       if(e.key==='ArrowLeft') prevSlide();
     });
   </script>
 </body>
 </html>
+
+  <!-- 第二批：新增好友 10頁 -->
+  <div class="slide">
+    <h2>新增好友的方法</h2>
+    <p>與朋友、家人保持聯繫的第一步</p>
+    <ul>
+      <li>可以用手機號碼、ID、QR碼、邀請連結</li>
+      <li>每個方法都很簡單，逐步學會</li>
+    </ul>
+    <div class="page-number">12</div>
+  </div>
+
+  <div class="slide">
+    <h2>使用手機號碼加好友 (步驟1)</h2>
+    <p>最常見的加好友方式 📱</p>
+    <ol>
+      <li>打開LINE</li>
+      <li>點擊下方的「好友」頁籤</li>
+      <li>點擊右上角的「加號＋」按鈕</li>
+    </ol>
+    <div class="page-number">13</div>
+  </div>
+
+  <div class="slide">
+    <h2>使用手機號碼加好友 (步驟2)</h2>
+    <p>輸入朋友的手機號碼</p>
+    <ol>
+      <li>在「邀請好友」中選擇「輸入電話號碼」</li>
+      <li>輸入對方號碼後按「搜尋」</li>
+      <li>按下「加為好友」</li>
+    </ol>
+    <div class="page-number">14</div>
+  </div>
+
+  <div class="slide">
+    <h2>用ID搜尋好友 (步驟1)</h2>
+    <p>若對方有設定LINE ID，可用此方法</p>
+    <ol>
+      <li>進入「加好友」頁面</li>
+      <li>選擇「ID搜尋」</li>
+    </ol>
+    <div class="page-number">15</div>
+  </div>
+
+  <div class="slide">
+    <h2>用ID搜尋好友 (步驟2)</h2>
+    <p>輸入朋友的LINE ID並加好友</p>
+    <ol>
+      <li>輸入ID後按「搜尋」</li>
+      <li>按「加為好友」完成</li>
+    </ol>
+    <div class="page-number">16</div>
+  </div>
+
+  <div class="slide">
+    <h2>用QR碼加好友 (步驟1)</h2>
+    <p>最方便快速的加好友方法 🔲</p>
+    <ol>
+      <li>進入「加好友」</li>
+      <li>選擇「QR Code」</li>
+    </ol>
+    <div class="page-number">17</div>
+  </div>
+
+  <div class="slide">
+    <h2>用QR碼加好友 (步驟2)</h2>
+    <p>掃描對方的QR碼</p>
+    <ol>
+      <li>將相機對準對方的QR碼</li>
+      <li>按「加為好友」</li>
+    </ol>
+    <div class="page-number">18</div>
+  </div>
+
+  <div class="slide">
+    <h2>用邀請連結加好友</h2>
+    <p>適合不方便當面交換資訊的情況</p>
+    <ol>
+      <li>進入「加好友」</li>
+      <li>選擇「邀請連結」</li>
+      <li>將連結傳送給對方</li>
+    </ol>
+    <div class="page-number">19</div>
+  </div>
+
+  <div class="slide">
+    <h2>確認好友邀請</h2>
+    <p>確定對方是否已成功成為好友</p>
+    <ol>
+      <li>回到「好友」頁面</li>
+      <li>查看是否出現對方名稱</li>
+    </ol>
+    <div class="page-number">20</div>
+  </div>
+
+  <div class="slide">
+    <h2>完成加好友學習！</h2>
+    <p>您已學會所有加好友的方法 🎉</p>
+    <div class="page-number">21</div>
+  </div>
+
+  <!-- 第三批：傳訊息功能 15頁 -->
+  <div class="slide">
+    <h2>開始聊天</h2>
+    <p>選擇一位好友或群組開始對話 💬</p>
+    <ol>
+      <li>打開LINE</li>
+      <li>點擊下方「聊天」圖示</li>
+      <li>選擇想聊天的對象</li>
+    </ol>
+    <div class="page-number">22</div>
+  </div>
+
+  <div class="slide">
+    <h2>傳送文字訊息 (步驟1)</h2>
+    <p>輸入訊息並發送</p>
+    <ol>
+      <li>點擊輸入框</li>
+      <li>輸入想傳的內容</li>
+    </ol>
+    <div class="page-number">23</div>
+  </div>
+
+  <div class="slide">
+    <h2>傳送文字訊息 (步驟2)</h2>
+    <p>按下紙飛機圖示發送訊息</p>
+    <ol>
+      <li>完成輸入後點擊發送</li>
+      <li>訊息會顯示在聊天室中</li>
+    </ol>
+    <div class="page-number">24</div>
+  </div>
+
+  <div class="slide">
+    <h2>傳送貼圖</h2>
+    <p>讓聊天更生動有趣 😆</p>
+    <ol>
+      <li>點擊輸入框左方的「笑臉」圖示</li>
+      <li>挑選貼圖並點擊發送</li>
+    </ol>
+    <div class="page-number">25</div>
+  </div>
+
+  <div class="slide">
+    <h2>傳送照片 (步驟1)</h2>
+    <p>分享生活照片給朋友</p>
+    <ol>
+      <li>點擊「+」按鈕</li>
+      <li>選擇「相簿」</li>
+    </ol>
+    <div class="page-number">26</div>
+  </div>
+
+  <div class="slide">
+    <h2>傳送照片 (步驟2)</h2>
+    <p>選擇照片並發送</p>
+    <ol>
+      <li>從相簿中選擇想傳的照片</li>
+      <li>按下「傳送」按鈕</li>
+    </ol>
+    <div class="page-number">27</div>
+  </div>
+
+  <div class="slide">
+    <h2>傳送影片</h2>
+    <p>和親友分享影片 🎥</p>
+    <ol>
+      <li>進入「+」選單</li>
+      <li>選擇影片並按發送</li>
+    </ol>
+    <div class="page-number">28</div>
+  </div>
+
+  <div class="slide">
+    <h2>錄製語音訊息 (步驟1)</h2>
+    <p>不想打字時的好幫手 🎤</p>
+    <ol>
+      <li>長按輸入框旁的麥克風圖示</li>
+      <li>開始錄音</li>
+    </ol>
+    <div class="page-number">29</div>
+  </div>
+
+  <div class="slide">
+    <h2>錄製語音訊息 (步驟2)</h2>
+    <p>完成後放開按鈕即可發送</p>
+    <div class="page-number">30</div>
+  </div>
+
+  <div class="slide">
+    <h2>進行語音通話</h2>
+    <p>免費與朋友通話 ☎️</p>
+    <ol>
+      <li>進入好友聊天室</li>
+      <li>點選右上角的「電話」圖示</li>
+    </ol>
+    <div class="page-number">31</div>
+  </div>
+
+  <div class="slide">
+    <h2>進行視訊通話</h2>
+    <p>與親友面對面聊天 🎥</p>
+    <ol>
+      <li>進入好友聊天室</li>
+      <li>點選「視訊」圖示</li>
+    </ol>
+    <div class="page-number">32</div>
+  </div>
+
+  <div class="slide">
+    <h2>傳送位置訊息</h2>
+    <p>讓朋友知道你在哪 📍</p>
+    <ol>
+      <li>點「+」按鈕</li>
+      <li>選擇「位置」並發送</li>
+    </ol>
+    <div class="page-number">33</div>
+  </div>
+
+  <div class="slide">
+    <h2>收回訊息</h2>
+    <p>誤傳訊息時的救星</p>
+    <ol>
+      <li>長按要刪除的訊息</li>
+      <li>選擇「收回」</li>
+    </ol>
+    <div class="page-number">34</div>
+  </div>
+
+  <div class="slide">
+    <h2>完成傳訊息功能學習！</h2>
+    <p>恭喜您學會所有傳訊息的方法 🎉</p>
+    <div class="page-numbe">35</div>
+  </div>
+
+  <!-- 第四批：聊天室管理與訊息技巧 10頁 -->
+  <div class="slide">
+    <h2>靜音聊天室</h2>
+    <p>避免被大量訊息打擾 🔕</p>
+    <ol>
+      <li>長按想靜音的聊天室</li>
+      <li>點選「通知設置」</li>
+      <li>選擇「靜音」</li>
+    </ol>
+    <div class="page-number">36</div>
+  </div>
+
+  <div class="slide">
+    <h2>釘選重要聊天室</h2>
+    <p>讓常用的聊天室固定在最上方 📌</p>
+    <ol>
+      <li>長按聊天室名稱</li>
+      <li>點選「釘選」</li>
+    </ol>
+    <div class="page-number">37</div>
+  </div>
+
+  <div class="slide">
+    <h2>封鎖廣告帳號</h2>
+    <p>避免收到不想要的訊息 🚫</p>
+    <ol>
+      <li>長按帳號名稱</li>
+      <li>點選「封鎖」</li>
+    </ol>
+    <div class="page-number">38</div>
+  </div>
+
+  <div class="slide">
+    <h2>收回訊息</h2>
+    <p>不小心傳錯訊息時的好幫手</p>
+    <ol>
+      <li>長按自己傳的訊息</li>
+      <li>選擇「收回」</li>
+    </ol>
+    <div class="page-number">39</div>
+  </div>
+
+  <div class="slide">
+    <h2>指定回覆</h2>
+    <p>讓對話更清楚，避免誤會 🔄</p>
+    <ol>
+      <li>長按要回覆的訊息</li>
+      <li>選擇「回覆」並輸入訊息</li>
+    </ol>
+    <div class="page-number">40</div>
+  </div>
+
+  <div class="slide">
+    <h2>無聲傳送訊息</h2>
+    <p>在不想吵醒別人的情況下使用 🤫</p>
+    <ol>
+      <li>輸入訊息後長按發送鍵</li>
+      <li>選擇「無聲傳送」</li>
+    </ol>
+    <div class="page-number">41</div>
+  </div>
+
+  <div class="slide">
+    <h2>檢查訊息已讀狀態</h2>
+    <p>確認對方是否看過訊息 👀</p>
+    <ol>
+      <li>發送訊息後，訊息旁會顯示「已讀」</li>
+      <li>數字表示有幾人已讀</li>
+    </ol>
+    <div class="page-number">42</div>
+  </div>
+
+  <div class="slide">
+    <h2>建立聊天室分類</h2>
+    <p>方便整理不同類型的聊天群組 📂</p>
+    <ol>
+      <li>進入「聊天列表」</li>
+      <li>點右上角「分類」按鈕</li>
+      <li>新增分類名稱並分配聊天室</li>
+    </ol>
+    <div class="page-number">43</div>
+  </div>
+
+  <div class="slide">
+    <h2>刪除聊天室</h2>
+    <p>清理不需要的聊天紀錄 🗑️</p>
+    <ol>
+      <li>長按聊天室名稱</li>
+      <li>選擇「刪除聊天室」</li>
+    </ol>
+    <div class="page-number">44</div>
+  </div>
+
+  <div class="slide">
+    <h2>完成聊天室管理與技巧學習！</h2>
+    <p>您已學會如何管理聊天室與使用進階訊息技巧 🎉</p>
+    <div class="page-number">45</div>
+  </div>
+
+  <!-- 第五批：謠言查證、記事本、群組公告 + 複習Q&A -->
+  <div class="slide">
+    <h2>查證訊息真偽 (步驟1)</h2>
+    <p>避免被假消息誤導 🧐</p>
+    <ol>
+      <li>在LINE搜尋「真的假的」官方帳號</li>
+      <li>點擊加入好友</li>
+    </ol>
+    <div class="page-number">46</div>
+  </div>
+
+  <div class="slide">
+    <h2>查證訊息真偽 (步驟2)</h2>
+    <p>將想確認的訊息轉發給「真的假的」</p>
+    <ol>
+      <li>長按訊息</li>
+      <li>點選「轉傳」→ 選擇「真的假的」</li>
+    </ol>
+    <div class="page-number">47</div>
+  </div>
+
+  <div class="slide">
+    <h2>使用記事本 (步驟1)</h2>
+    <p>儲存重要資訊方便隨時查看 📝</p>
+    <ol>
+      <li>進入想使用的聊天室</li>
+      <li>點選右上角選單</li>
+      <li>選擇「記事本」</li>
+    </ol>
+    <div class="page-number">48</div>
+  </div>
+
+  <div class="slide">
+    <h2>使用記事本 (步驟2)</h2>
+    <p>新增、編輯與刪除記事</p>
+    <ol>
+      <li>點擊「新增記事」</li>
+      <li>輸入內容並儲存</li>
+    </ol>
+    <div class="page-number">49</div>
+  </div>
+
+  <div class="slide">
+    <h2>使用相簿功能</h2>
+    <p>與群組成員分享照片 📷</p>
+    <ol>
+      <li>進入聊天室</li>
+      <li>點擊「相簿」</li>
+      <li>上傳照片建立新相簿</li>
+    </ol>
+    <div class="page-number">50</div>
+  </div>
+
+  <div class="slide">
+    <h2>建立群組公告</h2>
+    <p>在群組中傳達重要資訊 📢</p>
+    <ol>
+      <li>進入群組聊天室</li>
+      <li>長按訊息</li>
+      <li>選擇「設為公告」</li>
+    </ol>
+    <div class="page-number">51</div>
+  </div>
+
+  <div class="slide">
+    <h2>複習 1</h2>
+    <p>今天學到的重點：</p>
+    <ul>
+      <li>個人檔案設定</li>
+      <li>新增好友與傳送訊息方法</li>
+      <li>聊天室管理技巧</li>
+    </ul>
+    <div class="page-number">52</div>
+  </div>
+
+  <div class="slide">
+    <h2>複習 2</h2>
+    <p>更多實用技巧：</p>
+    <ul>
+      <li>收回訊息與指定回覆</li>
+      <li>封鎖帳號與謠言查證</li>
+      <li>記事本與群組公告</li>
+    </ul>
+    <div class="page-number">53</div>
+  </div>
+
+  <div class="slide">
+    <h2>Q & A 時間</h2>
+    <p>常見問題：</p>
+    <ul>
+      <li>如何知道對方已讀？</li>
+      <li>為什麼無法傳送訊息？</li>
+      <li>如何恢復刪掉的聊天紀錄？</li>
+      <li>如何封鎖或解除封鎖好友？</li>
+    </ul>
+    <div class="page-number">54</div>
+  </div>
