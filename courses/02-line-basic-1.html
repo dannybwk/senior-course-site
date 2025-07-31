@@ -19,6 +19,16 @@
     .page-number { position: absolute; bottom: 15px; right: 25px; font-size: 1.4em; color: #444; }
   </style>
 </head>
+  <div id="chapter-nav" style="position:fixed;top:20px;left:20px;background:#ffffffdd;padding:10px;border-radius:8px;z-index:1000;">
+  <button onclick="jumpToSlide(1)">封面</button>
+  <button onclick="jumpToSlide(3)">個人檔案</button>
+  <button onclick="jumpToSlide(12)">新增好友</button>
+  <button onclick="jumpToSlide(22)">傳訊息</button>
+  <button onclick="jumpToSlide(36)">聊天室管理</button>
+  <button onclick="jumpToSlide(46)">謠言查證</button>
+  <button onclick="jumpToSlide(52)">複習</button>
+</div>
+
 <body>
 
   <div class="slide active">
@@ -153,6 +163,13 @@
     function prevSlide() {
       if(currentSlide > 0){
         currentSlide--;
+        showSlide(currentSlide);
+      }
+    }
+
+    function jumpToSlide(index){
+      if(index>=0 && index<slides.length){
+        currentSlide = index;
         showSlide(currentSlide);
       }
     }
