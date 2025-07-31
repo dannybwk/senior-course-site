@@ -18,44 +18,161 @@
       text-align: center;
     }
     .slide {
-      max-width: 900px;
-      padding: 40px;
+      width: 100%;
+      height: 100vh;
+      padding: 60px;
+      box-sizing: border-box;
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       display: none;
+    }
+    .slide h1, .slide h2 {
+      font-size: 3em;
+    }
+    .slide p, .slide li {
+      font-size: 1.8em;
     }
     .slide.active {
       display: block;
     }
     .nav-buttons {
-      margin-top: 20px;
+      position: fixed;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
     }
     button {
       background-color: #f7b733;
       color: white;
       border: none;
-      padding: 10px 20px;
+      padding: 15px 30px;
       margin: 5px;
-      font-size: 18px;
+      font-size: 20px;
       cursor: pointer;
       border-radius: 6px;
     }
     button:hover {
       background-color: #e09e2d;
     }
+    img {
+      max-width: 80%;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
-  <div class="slide active"><h1>📱 手機基礎與常見問題教學</h1><p>學習手機基本操作與排解常見問題，建立使用信心。</p></div>
-  <div class="slide"><h2>課程目標</h2><p>了解手機的基本結構與操作、設定常用功能、學會解決常見問題。</p></div>
-  <div class="slide"><h2>手機的基本組成</h2><p>認識螢幕、按鈕、電源鍵、音量鍵與充電孔。</p></div>
-  <div class="slide"><h2>開機與解鎖</h2><p>長按電源鍵開機，學習使用密碼、圖形或臉部辨識解鎖。</p></div>
-  <div class="slide"><h2>調整音量與亮度</h2><p>使用音量鍵與快速設定面板調整音量與螢幕亮度。</p></div>
-  <div class="slide"><h2>連線設定</h2><p>打開Wi-Fi、藍牙，學會連接網路與藍牙耳機。</p></div>
-  <div class="slide"><h2>常見問題排解</h2><p>App找不到、手機卡住、空間不足時的處理方法。</p></div>
-  <div class="slide"><h2>實作練習</h2><p>跟著老師一起操作：開啟設定、調整亮度、連上Wi-Fi。</p></div>
-  <div class="slide"><h2>課堂總結</h2><p>回顧今天學到的手機基本操作技巧與問題排解方法。</p></div>
+  <div class="slide active">
+    <h1>📱 手機基礎與常見問題教學</h1>
+    <p>兩小時課程，幫助您熟悉手機操作並解決常見問題</p>
+  </div>
+
+  <div class="slide">
+    <h2>課程目標</h2>
+    <p>建立自信，讓手機成為生活好幫手</p>
+    <ul>
+      <li>認識手機按鍵與基本功能</li>
+      <li>學會開機、解鎖、調整音量與亮度</li>
+      <li>設定 Wi-Fi 與藍牙連線</li>
+      <li>處理常見問題</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <h2>手機的主要組成</h2>
+    <p>了解每個按鍵和部位的用途</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/IPhone_X_vector.svg" alt="手機組成圖">
+  </div>
+
+  <div class="slide">
+    <h2>開機與解鎖</h2>
+    <p>為什麼重要？因為這是使用手機的第一步！</p>
+    <ol>
+      <li>長按電源鍵 3 秒，直到螢幕亮起</li>
+      <li>輸入密碼 / 圖形 / 使用臉部辨識</li>
+      <li>成功進入手機主畫面</li>
+    </ol>
+  </div>
+
+  <div class="slide">
+    <h2>調整音量</h2>
+    <p>音量太大或太小，都會影響使用體驗</p>
+    <ul>
+      <li>用手機側邊的音量鍵調整</li>
+      <li>若沒反應，檢查靜音鍵（iPhone）或設定</li>
+    </ul>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/16/IPhone_ringer_switch.jpg" alt="音量鍵範例">
+  </div>
+
+  <div class="slide">
+    <h2>調整亮度</h2>
+    <p>螢幕太暗或太亮，容易看不清楚或耗電</p>
+    <ol>
+      <li>打開「設定」或「快速選單」</li>
+      <li>找到亮度控制條</li>
+      <li>上下滑動調整亮度</li>
+    </ol>
+  </div>
+
+  <div class="slide">
+    <h2>連接 Wi-Fi</h2>
+    <p>上網更快、省流量</p>
+    <ol>
+      <li>開啟「設定」→ Wi-Fi</li>
+      <li>選擇家裡或咖啡廳的網路名稱</li>
+      <li>輸入密碼 → 按「連線」</li>
+    </ol>
+  </div>
+
+  <div class="slide">
+    <h2>常見問題：App找不到</h2>
+    <p>找不到LINE或相機App怎麼辦？</p>
+    <ul>
+      <li>在主畫面往下滑 → 輸入App名稱搜尋</li>
+      <li>確認是否被移到資料夾內</li>
+      <li>從App Store / Play商店重新下載</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <h2>常見問題：手機卡住</h2>
+    <p>如果畫面不動了</p>
+    <ul>
+      <li>長按電源鍵直到出現「重新啟動」</li>
+      <li>若無法，長按電源+音量鍵強制重啟</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <h2>實作練習</h2>
+    <p>跟老師一起操作這些步驟</p>
+    <ul>
+      <li>開機並解鎖手機</li>
+      <li>調整音量和亮度</li>
+      <li>連上教室提供的 Wi-Fi</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <h2>複習一：今天學到了什麼？</h2>
+    <ul>
+      <li>手機的基本組成</li>
+      <li>如何開機、解鎖</li>
+      <li>音量與亮度調整</li>
+      <li>連線上網的方法</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <h2>複習二：常見問題解決方法</h2>
+    <ul>
+      <li>App找不到 → 搜尋或重新下載</li>
+      <li>手機卡住 → 重新啟動</li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <h2>Q & A 時間</h2>
+    <p>現在可以提出您的問題，老師會一一解答。</p>
+  </div>
 
   <div class="nav-buttons">
     <button onclick="prevSlide()">⬅ 上一頁</button>
@@ -91,4 +208,3 @@
   </script>
 </body>
 </html>
-
