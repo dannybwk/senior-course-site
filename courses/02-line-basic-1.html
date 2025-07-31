@@ -6,87 +6,37 @@
   <title>LINE基礎與小技巧</title>
   <style>
     body { font-family: Arial, sans-serif; background-color: #fffaf0; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center; }
-    .slide { width: 100%; height: 100vh; padding: 60px; box-sizing: border-box; background: white; display: none; }
+    .slide { width: 100%; height: 100vh; padding: 60px; box-sizing: border-box; background: white; display: none; position: relative; }
     .slide h1, .slide h2 { font-size: 3em; }
-    .slide p, .slide li { font-size: 1.8em; }
+    .slide p { font-size: 1.8em; }
+    .slide ul { list-style-position: inside; padding-left: 0; margin-top: 20px; }
+    .slide li { font-size: 1.8em; margin: 10px 0; }
     .slide.active { display: block; }
     .nav-buttons { position: fixed; bottom: 20px; width: 100%; text-align: center; }
     button { background-color: #06c755; color: white; border: none; padding: 15px 30px; margin: 5px; font-size: 20px; cursor: pointer; border-radius: 6px; }
     button:hover { background-color: #04a944; }
     img { max-width: 80%; margin-top: 20px; }
-    .page-number { position: absolute; bottom: 10px; right: 20px; font-size: 1.5em; color: #666; }
+    .page-number { position: absolute; bottom: 15px; right: 25px; font-size: 1.4em; color: #444; }
   </style>
 </head>
 <body>
 
-  <!-- 封面頁 -->
   <div class="slide active">
     <h1>💬 LINE基礎與小技巧</h1>
     <p>兩小時課程，帶您一步一步學會使用LINE</p>
     <div class="page-number">1</div>
   </div>
 
-  <!-- 這裡將完整展開PDF內容，並拆成超過50頁 -->
-  <!-- 每個功能(個人檔案、加好友、傳訊息、聊天室管理、封鎖、收回訊息、謠言查證、記事本、群組公告等)會細分為1~3頁，每頁都有標題、副標、說明、圖片、例子與頁碼 -->
-
-  <!-- 範例步驟 (以下只是部分示範) -->
   <div class="slide">
     <h2>課程目標</h2>
-    <p>學會LINE基本功能並能獨立操作</p>
+    <p>讓您能夠熟練使用LINE，與親友輕鬆聯繫</p>
     <ul>
-      <li>傳送訊息、照片、影片、語音</li>
+      <li>傳送文字、貼圖、照片、影片、語音、視訊</li>
       <li>新增好友並管理好友</li>
-      <li>學會使用記事本、群組公告、封鎖廣告帳號</li>
-      <li>能分辨可疑訊息並查證</li>
+      <li>使用記事本、相簿、群組公告</li>
+      <li>學會封鎖帳號、查證訊息真偽</li>
     </ul>
     <div class="page-number">2</div>
-  </div>
-
-  <div class="slide">
-    <h2>下載LINE</h2>
-    <p>開始前請確認手機已安裝LINE</p>
-    <ol>
-      <li>打開App Store或Google Play</li>
-      <li>搜尋「LINE」並下載安裝</li>
-      <li>安裝完成後打開App</li>
-    </ol>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE Logo">
-    <div class="page-number">3</div>
-  </div>
-
-  <!-- 依據PDF內容，以下將依序建立：
-       1. 個人檔案設定 (進入設定、修改名稱、修改狀態、換頭像) → 4-5頁
-       2. 新增好友 (手機號碼、ID、QR Code、邀請連結) → 6-10頁
-       3. 聊天功能 (文字、貼圖、照片、影片、語音、視訊) → 11-20頁
-       4. 聊天室管理 (分類、靜音、釘選、封鎖帳號) → 21-28頁
-       5. 訊息技巧 (收回、指定回覆、無聲傳送) → 29-35頁
-       6. 謠言查證步驟 → 36-40頁
-       7. 使用記事本、相簿 → 41-46頁
-       8. 群組公告、建立群組 → 47-50頁
-       9. 複習與Q&A → 51-55頁 -->
-
-  <!-- 在實作版本中，每個步驟都會有對應圖片(取自公開圖庫或LINE畫面截圖)與emoji輔助說明 -->
-
-  <div class="slide">
-    <h2>複習 1</h2>
-    <p>今天學到的重點：</p>
-    <ul>
-      <li>個人檔案設定</li>
-      <li>新增好友與傳訊息方法</li>
-      <li>聊天室管理技巧</li>
-    </ul>
-    <div class="page-number">51</div>
-  </div>
-
-  <div class="slide">
-    <h2>複習 2</h2>
-    <p>更多實用技巧：</p>
-    <ul>
-      <li>收回訊息與指定回覆</li>
-      <li>封鎖帳號與謠言查證</li>
-      <li>記事本與群組公告</li>
-    </ul>
-    <div class="page-number">52</div>
   </div>
 
   <div class="slide">
@@ -98,7 +48,7 @@
       <li>如何恢復刪掉的聊天紀錄？</li>
       <li>如何封鎖或解除封鎖好友？</li>
     </ul>
-    <div class="page-number">53</div>
+    <div class="page-number">55</div>
   </div>
 
   <div class="nav-buttons">
@@ -109,10 +59,31 @@
   <script>
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
-    function showSlide(index) { slides.forEach((s,i)=>s.classList.toggle('active', i===index)); }
-    function nextSlide() { if(currentSlide<slides.length-1){ currentSlide++; showSlide(currentSlide);} }
-    function prevSlide() { if(currentSlide>0){ currentSlide--; showSlide(currentSlide);} }
-    document.addEventListener('keydown', e=>{ if(e.key==='ArrowRight') nextSlide(); if(e.key==='ArrowLeft') prevSlide(); });
+
+    function showSlide(index) {
+      slides.forEach((s,i)=>{
+        s.classList.toggle('active', i===index);
+      });
+    }
+
+    function nextSlide() {
+      if(currentSlide<slides.length-1){
+        currentSlide++;
+        showSlide(currentSlide);
+      }
+    }
+
+    function prevSlide() {
+      if(currentSlide>0){
+        currentSlide--;
+        showSlide(currentSlide);
+      }
+    }
+
+    document.addEventListener('keydown', e=>{
+      if(e.key==='ArrowRight') nextSlide();
+      if(e.key==='ArrowLeft') prevSlide();
+    });
   </script>
 </body>
 </html>
