@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>樂齡課程首頁</title>
+  <title>樂齡數位學堂 - 首頁</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -23,7 +23,7 @@
       font-size: 24px;
       font-weight: bold;
     }
-    .login-container, .course-container {
+    .course-container {
       margin-top: 40px;
       max-width: 800px;
       width: 90%;
@@ -46,91 +46,31 @@
     .course-card:hover {
       transform: scale(1.03);
     }
-    .hidden {
-      display: none;
-    }
-    input[type="text"], input[type="password"] {
-      padding: 10px;
-      margin: 5px 0;
-      width: 100%;
-      box-sizing: border-box;
-    }
-    button {
-      background-color: #f7b733;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 6px;
-    }
-    button:hover {
-      background-color: #e09e2d;
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
     }
   </style>
 </head>
 <body>
   <header>樂齡數位學堂 - 課程首頁</header>
-
-  <div class="login-container" id="login">
-    <h2>請登入</h2>
-    <input type="text" id="username" placeholder="帳號">
-    <input type="password" id="password" placeholder="密碼">
-    <button onclick="login()">登入</button>
-    <p id="error-msg" style="color:red;"></p>
-  </div>
-
-  <div class="course-container hidden" id="courses">
+  <div class="course-container">
     <h2>請選擇課程簡報</h2>
     <div class="course-grid">
-      <div class="course-card" onclick="openSlide('slide1')">📱 手機基礎與常見問題教學</div>
-      <div class="course-card" onclick="openSlide('slide2')">💬 LINE基礎與小技巧</div>
-      <div class="course-card" onclick="openSlide('slide3')">📢 LINE進階應用與隱藏功能</div>
-      <div class="course-card" onclick="openSlide('slide4')">📸 手機拍照小技巧</div>
-      <div class="course-card" onclick="openSlide('slide5')">🎨 照片修圖趣</div>
-      <div class="course-card" onclick="openSlide('slide6')">🗺️ 手機交通與地圖應用 I</div>
-      <div class="course-card" onclick="openSlide('slide7')">🚌 手機交通與地圖應用 II</div>
-      <div class="course-card" onclick="openSlide('slide8')">🎉 活動與社交APP分享教學</div>
-      <div class="course-card" onclick="openSlide('slide9')">🔒 數位防詐與常見案例</div>
-      <div class="course-card" onclick="openSlide('slide10')">🤖 AI入門介紹與體驗</div>
-      <div class="course-card" onclick="openSlide('slide11')">🛠️ AI常用工具介紹 I</div>
-      <div class="course-card" onclick="openSlide('slide12')">🛠️ AI常用工具介紹 II</div>
+      <a href="courses/mobile-basic.html" class="course-card">📱 手機基礎與常見問題教學</a>
+      <a href="courses/line-basic.html" class="course-card">💬 LINE基礎與小技巧</a>
+      <a href="courses/line-advanced.html" class="course-card">📢 LINE進階應用與隱藏功能</a>
+      <a href="courses/photo-tips.html" class="course-card">📸 手機拍照小技巧</a>
+      <a href="courses/photo-edit.html" class="course-card">🎨 照片修圖趣</a>
+      <a href="courses/maps-basic.html" class="course-card">🗺️ 手機交通與地圖應用 I</a>
+      <a href="courses/maps-advanced.html" class="course-card">🚌 手機交通與地圖應用 II</a>
+      <a href="courses/social-apps.html" class="course-card">🎉 活動與社交APP分享教學</a>
+      <a href="courses/anti-scam.html" class="course-card">🔒 數位防詐與常見案例</a>
+      <a href="courses/ai-intro.html" class="course-card">🤖 AI入門介紹與體驗</a>
+      <a href="courses/ai-tools1.html" class="course-card">🛠️ AI常用工具介紹 I</a>
+      <a href="courses/ai-tools2.html" class="course-card">🛠️ AI常用工具介紹 II</a>
     </div>
   </div>
-
-  <script>
-    const USERNAME = "teacher";
-    const PASSWORD = "1234";
-
-    function login(){
-      const user = document.getElementById('username').value;
-      const pass = document.getElementById('password').value;
-
-      if(user === USERNAME && pass === PASSWORD){
-        document.getElementById('login').classList.add('hidden');
-        document.getElementById('courses').classList.remove('hidden');
-      } else {
-        document.getElementById('error-msg').innerText = "帳號或密碼錯誤";
-      }
-    }
-
-    function openSlide(slideId){
-      const slideLinks = {
-        slide1: "https://docs.google.com/presentation/d/EXAMPLE_ID1/embed",
-        slide2: "https://docs.google.com/presentation/d/EXAMPLE_ID2/embed",
-        slide3: "https://docs.google.com/presentation/d/EXAMPLE_ID3/embed",
-        slide4: "https://docs.google.com/presentation/d/EXAMPLE_ID4/embed",
-        slide5: "https://docs.google.com/presentation/d/EXAMPLE_ID5/embed",
-        slide6: "https://docs.google.com/presentation/d/EXAMPLE_ID6/embed",
-        slide7: "https://docs.google.com/presentation/d/EXAMPLE_ID7/embed",
-        slide8: "https://docs.google.com/presentation/d/EXAMPLE_ID8/embed",
-        slide9: "https://docs.google.com/presentation/d/EXAMPLE_ID9/embed",
-        slide10: "https://docs.google.com/presentation/d/EXAMPLE_ID10/embed",
-        slide11: "https://docs.google.com/presentation/d/EXAMPLE_ID11/embed",
-        slide12: "https://docs.google.com/presentation/d/EXAMPLE_ID12/embed"
-      };
-      window.open(slideLinks[slideId], '_blank');
-    }
-  </script>
 </body>
 </html>
