@@ -4,241 +4,246 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LINE 樂齡教學簡報</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.2/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.2/dist/theme/white.css" id="theme">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
-    section { font-size: 1.5em; }
-    .reveal { font-family: "Noto Sans TC", sans-serif; }
-    .reveal .slides { text-align: left; }
-    .reveal h1, .reveal h2 {
-      color: #d2691e; /* 橘黃色主題 */
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: #fffaf0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
     }
-    body { background-color: #fffaf0; }
+    .slide {
+      width: 100%;
+      height: 100vh;
+      padding: 60px;
+      box-sizing: border-box;
+      background: white;
+      display: none;
+    }
+    .slide h1, .slide h2 {
+      font-size: 3em;
+      color: #d2691e;
+    }
+    .slide p, .slide li {
+      font-size: 1.8em;
+    }
+    .slide.active {
+      display: block;
+    }
+    .nav-buttons {
+      position: fixed;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+    }
+    button {
+      background-color: #f7b733;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      margin: 5px;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    button:hover {
+      background-color: #e09e2d;
+    }
+    img {
+      max-width: 80%;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
-<div class="reveal">
-  <div class="slides">
-    <section>
-      <h1>LINE 樂齡教學簡報</h1>
-      <p>智樂活手機班｜基礎＋進階教學</p>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE 標誌" style="max-height: 200px;">
-    </section>
-
-    <section>
-      <h2>什麼是 LINE？</h2>
-      <ul>
-        <li>台灣最常用的通訊 APP</li>
-        <li>可傳文字、圖片、語音、影片、貼圖</li>
-        <li>也可以打電話、視訊通話</li>
-      </ul>
-      <img src="https://i.imgur.com/jlhYYQ2.png" alt="LINE 功能示意圖" style="max-height: 300px;">
-    </section>
-
-    <section>
-      <h2>練習題：LINE 用途小考</h2>
-      <p>Q1. LINE 可以用來做哪些事？</p>
-      <ul>
-        <li>A. 傳訊息</li>
-        <li>B. 照片修圖</li>
-        <li>C. 買菜付款</li>
-        <li>D. 以上皆是 ✅</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>延伸功能：LINE TODAY</h2>
-      <ul>
-        <li>每日新聞、天氣、星座、健康資訊</li>
-        <li>可根據喜好選擇主題</li>
-        <li>與 Yahoo 合作內容豐富</li>
-      </ul>
-      <img src="https://obs.line-scdn.net/0hZ4ib3sRAJkxaAgKPYUOKR0DJkJ9OgZdDh5zIxoHdXxaAAsEaUtdK1cPAXknTlcRaUpSIl9ZDzsiOlwQZyZ3IQ/w644" style="max-height: 300px;">
-    </section>
-
-    <section>
-      <h2>練習題：你最常用的功能是？</h2>
-      <ul>
-        <li>📩 傳訊息</li>
-        <li>👨‍👩‍👧‍👦 群組聊天</li>
-        <li>📍 分享位置</li>
-        <li>📷 AR 快拍</li>
-        <li>🧾 Keep 收藏</li>
-      </ul>
-      <p>請選一項功能，待會與同學分享使用經驗 😊</p>
-    </section>
-
-    <section>
-      <h2>小提醒</h2>
-      <ul>
-        <li>📵 不要點擊陌生連結</li>
-        <li>🕖 傳訊息請避開早上 7 點前、晚上 10 點後</li>
-        <li>🔐 啟用帳號保護功能：更安全！</li>
-      </ul>
-    </section>
-    <section>
-      <h2>如何加入好友：總覽</h2>
-      <ul>
-        <li>方式一：使用 QR Code 掃描</li>
-        <li>方式二：搜尋 LINE ID</li>
-        <li>方式三：手機號碼加入</li>
-        <li>方式四：從群組邀請中加入</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>加入好友：使用 QR Code</h2>
-      <ul>
-        <li>點選主頁 → 加號 → 加好友</li>
-        <li>選擇「行動條碼」</li>
-        <li>掃描對方提供的 QR Code</li>
-      </ul>
-      <img src="https://i.imgur.com/RKPYKPR.png" style="max-height: 300px;">
-    </section>
-
-    <section>
-      <h2>產生自己的 QR Code</h2>
-      <ul>
-        <li>可請朋友掃描你的 QR Code 加好友</li>
-        <li>點選主頁 → 加好友 → 我的條碼</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>加入好友：使用 LINE ID</h2>
-      <ul>
-        <li>輸入對方的 LINE ID（必須對方已開啟公開）</li>
-        <li>點選搜尋 → 輸入 ID → 送出</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>加入好友：使用手機號碼</h2>
-      <ul>
-        <li>輸入對方的手機號碼來查找</li>
-        <li>若對方帳號綁定了該號碼，會顯示出來</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>從群組邀請加好友</h2>
-      <ul>
-        <li>進入同一個群組後，可直接互加</li>
-        <li>點開成員列表 → 加為好友</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>好友邀請提醒與回應</h2>
-      <ul>
-        <li>當有人加你好友，會出現通知</li>
-        <li>可以選擇接受或封鎖</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>加入好友後的第一步</h2>
-      <ul>
-        <li>建議互傳貼圖，測試雙方是否已加成功</li>
-        <li>可留言「你好」、「我是○○老師」等訊息</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>好友名單管理</h2>
-      <ul>
-        <li>可長按好友 → 編輯名稱</li>
-        <li>分類好友：家庭、朋友、學員...</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>練習時間：加入好友任務</h2>
-      <ol>
-        <li>與左右鄰居交換 LINE ID 或 QR Code</li>
-        <li>實際嘗試加入對方為好友</li>
-        <li>傳出一則貼圖，確認成功</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>好友設定：封鎖與解除封鎖</h2>
-      <ul>
-        <li>長按好友 → 選擇封鎖</li>
-        <li>封鎖後對方無法傳訊給你</li>
-        <li>解除封鎖方式：設定 → 好友 → 封鎖名單</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>好友設定：隱藏與刪除</h2>
-      <ul>
-        <li>隱藏好友：從主頁不顯示，但資料仍在</li>
-        <li>刪除好友：需先封鎖 → 再進入封鎖名單刪除</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>好友提醒：LINE ID 不可變更</h2>
-      <ul>
-        <li>LINE ID 一旦設定無法更改</li>
-        <li>若忘記，可分享 QR Code 給對方</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>常見問題：加好友失敗怎麼辦？</h2>
-      <ul>
-        <li>確認對方 LINE ID 正確拼寫</li>
-        <li>對方有開啟「允許被搜尋」嗎？</li>
-        <li>手機是否連上網路？</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>小技巧：分享好友給他人</h2>
-      <ul>
-        <li>長按好友 → 選「分享」</li>
-        <li>可將此人資訊傳給群組或其他朋友</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>練習題：哪個方法無法加好友？</h2>
-      <ul>
-        <li>A. 掃描 QR Code</li>
-        <li>B. LINE ID 搜尋</li>
-        <li>C. 留言板留言 ❌</li>
-        <li>D. 手機號碼加入</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>分享與討論</h2>
-      <p>你最常用的加好友方式是哪一種？</p>
-      <p>是否曾經遇到找不到朋友帳號的情況？</p>
-      <p>請與小組成員分享經驗。</p>
-    </section>
-
-    <section>
-      <h2>恭喜完成本單元！</h2>
-      <p>你已學會：</p>
-      <ul>
-        <li>使用 QR Code、LINE ID、手機號碼加好友</li>
-        <li>如何封鎖、解除封鎖與刪除好友</li>
-        <li>好友加成實作練習</li>
-      </ul>
-    </section>
-  </div>
+  <div class="slide active">
+  <h1>📱 LINE 樂齡教學簡報</h1>
+  <p>智樂活手機班｜基礎＋進階教學</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE 標誌">
 </div>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.2/dist/reveal.min.js"></script>
-<script>
-  Reveal.initialize({
-    hash: true,
-    slideNumber: true,
-    transition: 'fade'
-  });
-</script>
+
+<div class="slide">
+  <h2>什麼是 LINE？</h2>
+  <ul>
+    <li>台灣最常用的通訊 APP</li>
+    <li>可傳文字、圖片、語音、影片、貼圖</li>
+    <li>也可以打電話、視訊通話</li>
+  </ul>
+  <img src="https://i.imgur.com/jlhYYQ2.png" alt="LINE 功能示意圖">
+</div>
+
+<div class="slide">
+  <h2>延伸功能：LINE TODAY</h2>
+  <ul>
+    <li>每日新聞、天氣、星座、健康資訊</li>
+    <li>可根據喜好選擇主題</li>
+    <li>與 Yahoo 合作內容豐富</li>
+  </ul>
+  <img src="https://obs.line-scdn.net/0hZ4ib3sRAJkxaAgKPYUOKR0DJkJ9OgZdDh5zIxoHdXxaAAsEaUtdK1cPAXknTlcRaUpSIl9ZDzsiOlwQZyZ3IQ/w644">
+</div>
+
+<div class="slide">
+  <h2>練習題：你最常用的功能是？</h2>
+  <ul>
+    <li>📩 傳訊息</li>
+    <li>👨‍👩‍👧‍👦 群組聊天</li>
+    <li>📍 分享位置</li>
+    <li>📷 AR 快拍</li>
+    <li>🧾 Keep 收藏</li>
+  </ul>
+  <p>請選一項功能，待會與同學分享使用經驗 😊</p>
+</div>
+
+<div class="slide">
+  <h2>小提醒</h2>
+  <ul>
+    <li>📵 不要點擊陌生連結</li>
+    <li>🕖 傳訊息請避開早上 7 點前、晚上 10 點後</li>
+    <li>🔐 啟用帳號保護功能：更安全！</li>
+  </ul>
+</div>
+
+  <div class="slide">
+  <h2>什麼是 LINE Keep？</h2>
+  <p>Keep 是 LINE 提供的個人雲端空間，儲存重要內容。</p>
+</div>
+<div class="slide">
+  <h2>如何儲存到 Keep？</h2>
+  <ul>
+    <li>長按訊息 → 點選「Keep」</li>
+    <li>可儲存文字、圖片、連結、檔案</li>
+  </ul>
+</div>
+<div class="slide">
+  <h2>瀏覽 Keep 內容</h2>
+  <ul>
+    <li>主頁 → 點選「Keep」</li>
+    <li>分類瀏覽：照片、影片、連結、檔案</li>
+  </ul>
+</div>
+<div class="slide">
+  <h2>從 Keep 分享內容</h2>
+  <ul>
+    <li>在 Keep 裡點選項目 → 選擇分享對象</li>
+    <li>也可從聊天室開啟 Keep 直接傳送</li>
+  </ul>
+</div>
+<div class="slide">
+  <h2>Keep 容量限制</h2>
+  <p>免費帳戶最多可儲存 1GB 資料，超過需清理或升級。</p>
+</div>
+<div class="slide">
+  <h2>Keep 實作練習</h2>
+  <ul>
+    <li>將一則聊天文字儲存到 Keep</li>
+    <li>從 Keep 分享一張圖片到群組</li>
+  </ul>
+</div>
+<div class="slide">
+  <h2>什麼是 LINE 記事本？</h2>
+  <p>可在群組中張貼大家都可看到的訊息與圖片。</p>
+</div>
+<div class="slide">
+  <h2>如何使用記事本？</h2>
+  <ul>
+    <li>進入聊天室 → 點選「+」→ 選擇「記事本」</li>
+    <li>可新增標題、文字、圖片</li>
+  </ul>
+</div>
+<div class="slide">
+  <h2>誰可以看到記事本？</h2>
+  <p>所有群組成員都可看到，也能回應與按讚。</p>
+</div>
+<div class="slide">
+  <h2>刪除記事本</h2>
+  <ul>
+    <li>只有發文者本人可以刪除</li>
+    <li>刪除後所有人都無法再看到</li>
+  </ul>
+</div>
+<div class="slide">
+  <h2>記事本實作練習</h2>
+  <ul>
+    <li>新增一則記事，內容為：下次聚會時間</li>
+    <li>請鄰座同學按讚與留言</li>
+  </ul>
+</div>
+<div class="slide">
+  <h2>什麼是 LINE 相簿？</h2>
+  <p>群組相簿可整理所有人的照片，方便回顧。</p>
+</div>
+<div class="slide">
+  <h2>建立相簿</h2>
+  <ul>
+    <li>聊天室 → 相簿 → 建立新相簿</li>
+    <li>選擇照片 → 命名相簿名稱 → 儲存</li>
+  </ul>
+</div>
+<div class="slide">
+  <h2>新增照片到舊有相簿</h2>
+  <ul>
+    <li>打開相簿 → 點右上角「+」新增</li>
+    <li>可新增活動照片或回憶紀錄</li>
+  </ul>
+</div>
+<div class="slide">
+  <h2>下載相簿中的照片</h2>
+  <ul>
+    <li>點選相片 → 點右上角下載符號</li>
+    <li>照片會儲存至手機相簿</li>
+  </ul>
+</div>
+<div class="slide">
+  <h2>刪除相簿或相片</h2>
+  <p>僅限上傳者本人可以刪除，刪除後其他人看不到。</p>
+</div>
+<div class="slide">
+  <h2>相簿實作練習</h2>
+  <ul>
+    <li>建立一個相簿，名稱為「今天的學習成果」</li>
+    <li>上傳一張現場照片</li>
+  </ul>
+</div>
+
+$1
+    <button onclick="prevSlide()">⬅ 上一頁</button>
+    <button onclick="nextSlide()">下一頁 ➡</button>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+    }
+
+    function nextSlide() {
+      if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        showSlide(currentSlide);
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+        showSlide(currentSlide);
+      }
+    }
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'ArrowRight') nextSlide();
+      if (event.key === 'ArrowLeft') prevSlide();
+    });
+
+    window.onload = () => showSlide(currentSlide);
+  </script>
 </body>
 </html>
